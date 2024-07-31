@@ -1,66 +1,60 @@
 <template>
   <div class="booking-container">
-    <h1>Бронирование</h1>
-    <div class="iframe-container">
-      <iframe
-          :src="iframeSrc"
-          frameborder="0"
-          allowfullscreen
-      ></iframe>
+    <h1>Бронирование номеров</h1>
+    <div class="underline"></div>
+    <div class="iframe-wrapper">
+      <div id="booking_iframe">
+        <iframe :src="iframeSrc" id="booking_iframe_iframe" frameborder="0" allowtransparency="1" style="width: 100%; height: 1653px;" sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox" scrolling="no"></iframe>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  computed: {
-    iframeSrc() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const checkinDate = urlParams.get('dfrom') || '';
-      const checkoutDate = urlParams.get('dto') || '';
-      const guests = urlParams.get('adults') || '1';
-
-      return `https://hotel-aql.pages.dev/booking?dfrom=${encodeURIComponent(checkinDate)}&dto=${encodeURIComponent(checkoutDate)}&adults=${encodeURIComponent(guests)}&padding=20&lang=ru&radius=20&uid=0b68a9e2-458c-46c4-9c03-c191a7e32b38`;
-    },
-  },
+  data() {
+    return {
+      iframeSrc: 'https://reservationsteps.ru/rooms/index/dbbb125e-d1ee-4e83-8b20-6cb396142aac?lang=ru&scroll_to_rooms=1&colorSchemePreview=0&onlyrooms=&name=&surname=&email=&phone=&orderid=&servicemode=0&firstroom=0&vkapp=&insidePopup=0&dfrom=01-08-2024&dto=02-08-2024&adults=1'
+    };
+  }
 }
 </script>
 
 <style scoped>
+body {
+  background-color: #005a5b !important;
+}
+
 .booking-container {
-  padding: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  padding-bottom: 50px;
   text-align: center;
+  margin: 106px auto 0;
 }
 
 h1 {
-  margin-bottom: 20px;
-  font-size: 2em;
-  color: #333;
+  font-size: 4em;
+  margin-bottom: 10px;
+  color: #b4975b;
+  font-family: TildaSans;
 }
 
-.iframe-container {
+.underline {
+  width: 780px;
+  height: 1px;
+  background-color: #b4975b;
+  margin: 0 auto 30px;
+}
+
+.iframe-wrapper {
   position: relative;
-  width: 100%;
-  height: 800px;
-  margin-top: 20px;
 }
 
-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+#booking_iframe_iframe {
   width: 100%;
-  height: 100%;
+  height: 1653px;
   border: none;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) {
-  .iframe-container {
-    height: 600px;
-  }
 }
 </style>

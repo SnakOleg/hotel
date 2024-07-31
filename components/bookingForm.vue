@@ -68,7 +68,6 @@ export default {
   mounted() {
     this.startSlider()
 
-    // Initialize the Bnovo widget
     const script = document.createElement('script')
     script.src = '//widget.reservationsteps.ru/js/bnovo.js'
     script.onload = () => {
