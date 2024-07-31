@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import BookingForm from '/components/BookingForm.vue'
-import Gallery from '/components/Gallery.vue'
-import About from '/components/About.vue'
-import Contact from '/components/Contact.vue'
+import BookingForm from '@/components/bookingForm.vue'
+import Gallery from '@/components/gallery.vue'
+import About from '@/components/about.vue'
+import Contact from '@/components/contact.vue'
 
 export default {
   components: {
