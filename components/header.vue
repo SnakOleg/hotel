@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import NavLinks from '/components/NavLinks.vue'
+import NavLinks from '/components/navLinks.vue'
 
 export default {
   components: {
