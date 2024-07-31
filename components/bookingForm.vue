@@ -108,7 +108,7 @@ export default {
           max_age: "17",
           adults_default: "1",
           cancel_color: "#1875F0",
-          url: "http://localhost:3000/booking",
+          url: "https://hotel-aql.pages.dev//booking",
           switch_mobiles_width: "800",
         })
       })
