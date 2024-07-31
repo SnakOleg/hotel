@@ -4,22 +4,7 @@
       <div class="logo">
         <NuxtImg src="image/logo.png" alt="Logo" />
       </div>
-      <h2>Забронировать номер</h2>
-      <form @submit.prevent="submitForm">
-        <div class="form-group">
-          <label for="checkin-date">Дата заезда</label>
-          <input type="date" id="checkin-date" v-model="checkinDate" required />
-        </div>
-        <div class="form-group">
-          <label for="checkout-date">Дата выезда</label>
-          <input type="date" id="checkout-date" v-model="checkoutDate" required />
-        </div>
-        <div class="form-group">
-          <label for="guests">Количество гостей</label>
-          <input type="number" id="guests" v-model="guests" min="1" required />
-        </div>
-        <button type="submit">Забронировать</button>
-      </form>
+      <div id="_bn_widget_" class="bnovo-widget"></div>
     </div>
     <div class="image-slider">
       <img :src="currentImage" :alt="'Hotel Image ' + currentIndex" />
@@ -41,9 +26,6 @@
 export default {
   data() {
     return {
-      checkinDate: '',
-      checkoutDate: '',
-      guests: 1,
       currentIndex: 0,
       images: [
         '/image/gallery/hotel.webp',
@@ -82,12 +64,56 @@ export default {
       this.currentIndex = index
       this.startSlider()
     },
-    submitForm() {
-      alert(`Бронирование: Заезд - ${this.checkinDate}, Выезд - ${this.checkoutDate}, Гости - ${this.guests}`);
-    },
   },
   mounted() {
     this.startSlider()
+
+    // Initialize the Bnovo widget
+    const script = document.createElement('script')
+    script.src = '//widget.reservationsteps.ru/js/bnovo.js'
+    script.onload = () => {
+      Bnovo_Widget.init(() => {
+        Bnovo_Widget.open('_bn_widget_', {
+          type: "vertical",
+          uid: "dbbb125e-d1ee-4e83-8b20-6cb396142aac",
+          lang: "ru",
+          width: "300",
+          width_mobile: "300",
+          background: "#ffffff",
+          background_mobile: "#ffffff",
+          bg_alpha: "100",
+          bg_alpha_mobile: "100",
+          border_color_mobile: "#C6CAD3",
+          padding: "24",
+          padding_mobile: "24",
+          border_radius: "8",
+          button_font_size: "14",
+          button_height: "42",
+          font_type: "inter",
+          title_color: "#242742",
+          title_color_mobile: "#242742",
+          title_size: "22",
+          title_size_mobile: "22",
+          inp_color: "#242742",
+          inp_bordhover: "#dedfe3",
+          inp_bordcolor: "#BCBCBC",
+          inp_alpha: "100",
+          btn_background: "#b4975b",
+          btn_background_over: "#8A754C",
+          btn_textcolor: "#FFFFFF",
+          btn_textover: "#FFFFFF",
+          btn_bordcolor: "#b4975b",
+          btn_bordhover: "#8A754C",
+          min_age: "0",
+          max_age: "17",
+          adults_default: "1",
+          cancel_color: "#1875F0",
+          url: "http://localhost:3000/booking",
+          switch_mobiles_width: "800",
+        })
+      })
+    }
+    document.body.appendChild(script)
   },
   beforeDestroy() {
     this.stopSlider()
@@ -201,42 +227,6 @@ h2 {
 
 .dot.active {
   background-color: #fff;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-  color: white;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  background-color: #b4975b;
-  color: white;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #555;
 }
 
 @media (max-width: 768px) {
