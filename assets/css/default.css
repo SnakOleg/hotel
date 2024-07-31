@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'TildaSans';
+    src: url('../font/TildaSans-Semibold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, p, label{
+    font-family: 'TildaSans';
+}
+
+input {
+    color: black;
+}
