@@ -127,6 +127,10 @@ h2 {
   color: white;
 }
 
+.bnovo-widget {
+  z-index: 1;
+}
+
 .booking-section {
   display: flex;
   align-items: flex-start;
@@ -134,7 +138,7 @@ h2 {
   padding: 40px;
   max-width: 1400px;
   margin: 0 auto;
-  background-color: rgba(9, 9, 9, 0.16);
+  background-color: rgba(9, 9, 9, 0.16) !important;
   border-radius: 0 0 100px 100px;
 }
 
