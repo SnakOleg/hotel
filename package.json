@@ -14,5 +14,8 @@
     "ipx": "^3.0.1",
     "nuxt": "^3.12.4",
     "vue": "latest"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.12.1"
   }
 }

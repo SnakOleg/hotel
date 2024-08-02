@@ -1,5 +1,4 @@
 export default defineNuxtConfig({
-
   app: {
     head: {
       charset: 'utf-8',
@@ -14,7 +13,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/image'],
+  modules: ['@nuxt/image', '@nuxtjs/tailwindcss'],
 
   image: {
     domains: ['localhost:3000'],
@@ -27,4 +26,6 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+
+  compatibilityDate: '2024-08-02',
 })

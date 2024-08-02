@@ -1,13 +1,21 @@
 <template>
-  <div class="gallery">
-    <h2>Наши номера</h2>
+  <div :id="id" class="gallery">
+    <h2 class="text-6xl">Наши номера</h2>
     <div class="gallery-grid">
-      <div class="gallery-item" v-for="(room, index) in rooms" :key="index">
-        <img :src="room.image" :alt="room.name" />
-        <div class="gallery-overlay">
-          <h3>{{ room.name }}</h3>
-          <p>{{ room.description }}</p>
-        </div>
+      <div
+          v-for="(room, index) in rooms"
+          :key="index"
+          :class="['gallery-item', `div${index + 1}`, { visible: visibleIndexes.includes(index) }]"
+      >
+        <NuxtImg :src="room.image" :alt="room.name" class="rounded-md mb-2" />
+      </div>
+      <div
+          v-for="(room, index) in rooms"
+          :key="index"
+          :class="['gallery-description', `div${index + 1}-text`, { visible: visibleIndexes.includes(index) }]"
+      >
+        <h3 class="text-5xl p-4">{{ room.name }}</h3>
+        <p>{{ room.description }}</p>
       </div>
     </div>
   </div>
@@ -15,88 +23,128 @@
 
 <script>
 export default {
+  props: {
+    id: {
+      type: String,
+      required: false,
+    },
+  },
   data() {
     return {
       rooms: [
         {
           name: 'Стандартный номер',
           image: '/image/gallery/hotel.webp',
-          description: 'Уютный номер с видом на море, идеален для семейного отдыха.',
+          description: 'Уютный номер с видом на море, идеален для семейного отдыха. Этот номер предоставляет все необходимые удобства, включая кондиционер, мини-бар, бесплатный Wi-Fi и телевизор с плоским экраном. Ванная комната оборудована современными принадлежностями и феном. Идеальный вариант для тех, кто хочет насладиться комфортным отдыхом без лишних затрат.',
         },
         {
           name: 'Люкс',
           image: '/image/gallery/hotel2.jpg',
-          description: 'Просторный номер с джакузи и балконом, подходящий для романтического отдыха.',
+          description: 'Просторный номер с джакузи и балконом, подходящий для романтического отдыха. Этот номер включает в себя роскошную кровать, отдельную гостиную зону и просторную ванную комнату с джакузи. Из балкона открывается потрясающий вид на окрестности, что делает его идеальным местом для вечерних посиделок. Также предоставляется доступ к эксклюзивным услугам отеля, таким как спа и фитнес-центр.',
         },
         {
           name: 'Пентхаус',
           image: '/image/gallery/hotel3.jpg',
-          description: 'Эксклюзивный номер на верхнем этаже с панорамным видом.',
+          description: 'Эксклюзивный номер на верхнем этаже с панорамным видом. Пентхаус предлагает непревзойденный комфорт и роскошь, включая просторную гостиную, полностью оборудованную кухню и собственную террасу с видом на город. Гости могут воспользоваться услугами личного консьержа и круглосуточного обслуживания номеров. Это идеальное место для тех, кто ценит высочайший уровень сервиса и приватности.',
         },
       ],
-    }
+      visibleIndexes: [],
+    };
   },
-}
+  mounted() {
+    window.addEventListener('scroll', this.checkVisibility);
+    this.checkVisibility();
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.checkVisibility);
+  },
+  methods: {
+    checkVisibility() {
+      const galleryItems = document.querySelectorAll('.gallery-item, .gallery-description');
+      galleryItems.forEach((item, index) => {
+        const rect = item.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          if (!this.visibleIndexes.includes(index)) {
+            this.visibleIndexes.push(index);
+          }
+        }
+      });
+    },
+  },
+};
 </script>
 
-<style scoped src="~/assets/css/default.css"></style>
-
 <style scoped>
-h2 {
-  color: white;
+.gallery {
+  padding: 20px;
+  text-align: center;
 }
 
-.gallery {
-  padding: 50px 20px;
-  text-align: center;
+.gallery h2 {
+  margin-bottom: 30px;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 60px;
+  grid-row-gap: 20px;
 }
 
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
+.gallery-item,
+.gallery-description {
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-item.visible,
+.gallery-description.visible {
+  opacity: 1;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.div1-text {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.div2 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+.div2-text {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.div3 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.div3-text {
+  grid-area: 3 / 2 / 4 / 3;
 }
 
 .gallery-item img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
-  transition: transform 0.3s;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-.gallery-item:hover img {
-  transform: scale(1.1);
-}
-
-.gallery-overlay {
-  font-family: 'TildaSans';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
+.gallery-description {
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 86px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s;
 }
 
-.gallery-item:hover .gallery-overlay {
-  opacity: 1;
-}
-
-.gallery-overlay h3 {
-  margin-bottom: 10px;
+.gallery-description h3 {
+  margin-bottom: 5px;
 }
 </style>

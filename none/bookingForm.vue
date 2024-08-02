@@ -120,7 +120,7 @@ export default {
 }
 </script>
 
-<style scoped src="~/assets/css/default.css"></style>
+<style scoped src="assets/css/default.css"></style>
 
 <style scoped>
 h2 {

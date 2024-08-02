@@ -5,14 +5,21 @@
 }
 
 @font-face {
-    font-family: 'TildaSans';
-    src: url('../font/TildaSans-Semibold.ttf');
+    font-family: 'Geologica';
+    src: url('../font/Geologica-Light.woff2');
     font-weight: normal;
     font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6, p, label{
-    font-family: 'TildaSans';
+@font-face {
+    font-family: 'GeologicaExtra';
+    src: url('../font/Geologica-ExtraLight.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, p, label, span{
+    font-family: 'Geologica', sans-serif;
 }
 
 input {
