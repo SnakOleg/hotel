@@ -147,4 +147,13 @@ export default {
 .gallery-description h3 {
   margin-bottom: 5px;
 }
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    display: block;
+  }
+  .gallery-item {
+    margin-bottom: 20px;
+  }
+}
 </style>

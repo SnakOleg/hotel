@@ -12,16 +12,17 @@
             <a class="tbase hover:opacity-60" href="#map">Мы тут</a>
             <a class="tbase hover:opacity-60" href="#contacts">Контакты</a>
           </div>
+          <button class="md:hidden flex items-center" @click="toggleMenu">
+            <svg class="w-6 h-6 text-[#7E7E8E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
         </div>
-        <div>
-          <div class="flex gap-1 items-center cursor-pointer hover:opacity-60 relative">
-            <div class="tbase">Москва</div>
-            <div class="relative bottom-[2px]">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.5 12L12 15.9999L16.5 12" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </div>
-          </div>
+        <div :class="{'block': isMenuOpen, 'hidden': !isMenuOpen}" class="md:hidden absolute left-0 w-full bg-white rounded-lg shadow-lg mt-2 py-3 px-2 mt-64 md:rounded-tr-2xl">
+          <a class="block py-2 px-4 text-[#7E7E8E] hover:bg-gray-200" href="#booking-form" @click="closeMenu">Отели</a>
+          <a class="block py-2 px-4 text-[#7E7E8E] hover:bg-gray-200" href="#gallery" @click="closeMenu">Апартаменты</a>
+          <a class="block py-2 px-4 text-[#7E7E8E] hover:bg-gray-200" href="#map" @click="closeMenu">Мы тут</a>
+          <a class="block py-2 px-4 text-[#7E7E8E] hover:bg-gray-200" href="#contacts" @click="closeMenu">Контакты</a>
         </div>
       </div>
     </div>
@@ -30,7 +31,20 @@
 
 <script>
 export default {
-  name: 'NavigationBar'
+  name: 'NavigationBar',
+  data() {
+    return {
+      isMenuOpen: false
+    }
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
+    closeMenu() {
+      this.isMenuOpen = false;
+    }
+  }
 }
 </script>
 
