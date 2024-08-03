@@ -59,7 +59,7 @@ html {
   padding-right: 1rem;
 }
 
-NuxtImg {
+img {
   height: 46px;
 }
 

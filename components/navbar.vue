@@ -53,7 +53,7 @@ html {
   scroll-behavior: smooth;
 }
 
-NuxtImg {
+img {
   height: 46px;
 }
 
