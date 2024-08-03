@@ -13,46 +13,49 @@
               oncontextmenu="return false;"
               style="user-select: none;"
           />
-          <h1 class="absolute left-0 bottom-0 block lg:text-8xl">
-            <span id="network-title" class="relative block opacity-0">
-              <span id="network-text" style="font-family: 'GeologicaExtra'" class="relative z-[3] inline-block opacity-0 px-4 py-2 text-[#c2a404]">
-                Берег моря
+          <h1 class="absolute left-0 bottom-0 block text-3xl md:text-5xl lg:text-7xl">
+            <span id="network-title" class="relative block">
+              <span class="relative z-[1] inline-block">
+                <span id="network-text" style="font-family: 'GeologicaExtra'" class="relative z-[3] inline-block px-2 py-1 md:px-4 md:py-2 text-[#c2a404]">
+                  База отдыха
+                </span>
+                <span class="absolute inset-0 z-[2] bg-bg rounded-tr-lg md:rounded-tr-2xl"></span>
               </span>
-              <span class="z-[2] absolute inline-block right-14 top-0 w-full h-full bg-bg md:rounded-tr-2xl">
-                <span class="absolute md:block hidden left-0">
-                  <div class="w-[20px] h-[20px]" style="background-image: url('/svg/idk.svg');"></div>
-                </span>
-                <span class="absolute md:block hidden -right-[39px] bottom-[-2px]">
-                  <svg width="39" height="22" viewBox="0 0 39 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M39 22V20H20C8.95431 20 0 11.0457 0 0V22H39Z" fill="#F5F5F5"></path>
-                  </svg>
-                </span>
+              <span class="absolute left-0 md:block hidden -top-5 z-[3]">
+                <div class="w-[20px] h-[20px]" style="background-image: url('/svg/idk.svg');"></div>
+              </span>
+              <span class="absolute right-0 md:right-[42px] bottom-[-2px] md:block hidden z-[3]">
+                <svg width="39" height="22" viewBox="0 0 39 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M39 22V20H20C8.95431 20 0 11.0457 0 0V22H39Z" fill="#F5F5F5"></path>
+                </svg>
               </span>
             </span>
-            <span id="petersburg-title" class="relative inline-block lg:text-8xl opacity-0">
-              <span id="petersburg-text" style="font-family: 'GeologicaExtra'" class="relative z-[3] inline-block opacity-0 px-4 py-2 text-[#c2a404]">
-                База отдыха
+
+            <span id="petersburg-title" class="relative block text-3xl md:text-5xl lg:text-7xl">
+              <span class="relative z-[1] inline-block">
+                <span id="petersburg-text" style="font-family: 'GeologicaExtra'" class="relative z-[3] inline-block px-2 py-1 md:px-4 md:py-2 text-[#c2a404]">
+                  Азовское море
+                </span>
+                <span class="absolute inset-0 z-[2] bg-bg rounded-tr-lg md:rounded-tr-2xl"></span>
               </span>
-              <span class="z-[2] absolute inline-block left-0 top-0 w-full h-full bg-bg md:rounded-tr-2xl">
-                <span class="absolute md:block hidden left-0 -top-5">
-                  <div class="w-[20px] h-[20px]" style="background-image: url('/svg/idk.svg');"></div>
-                </span>
-                <span class="absolute md:block hidden -right-[39px] bottom-[-2px]">
-                  <svg width="39" height="22" viewBox="0 0 39 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M39 22V20H20C8.95431 20 0 11.0457 0 0V22H39Z" fill="#F5F5F5"></path>
-                  </svg>
-                </span>
+              <span class="absolute left-0 md:block hidden -top-5 z-[3]">
+                <div class="w-[20px] h-[20px]" style="background-image: url('/svg/idk.svg');"></div>
+              </span>
+              <span class="absolute right-0 md:right-[-39px] bottom-[-2px] md:block hidden z-[3]">
+                <svg width="39" height="22" viewBox="0 0 39 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M39 22V20H20C8.95431 20 0 11.0457 0 0V22H39Z" fill="#F5F5F5"></path>
+                </svg>
               </span>
             </span>
           </h1>
-          <div id="card-container" class="absolute right-6 bottom-6 gap-4 md:flex hidden flex-col card-item invisible opacity-0">
-            <div class="bg-white p-4 rounded-[20px] flex flex-col gap-10 max-w-[220px]">
-              <img alt="Card Icon" loading="lazy" width="36" height="36" decoding="async" src="/svg/card.svg"/>
-              <div class="text-sm">Оплата картами МИР и СБП</div>
+          <div id="card-container" class="absolute right-2 md:right-6 bottom-6 gap-2 md:gap-4 flex flex-col card-item invisible opacity-0">
+            <div class="bg-white p-2 md:p-4 rounded-[20px] flex flex-col gap-4 md:gap-10 max-w-[160px] md:max-w-[220px]">
+              <img alt="Card Icon" loading="lazy" width="36" height="36" decoding="async" src="/svg/card.svg" />
+              <div class="text-xs md:text-sm">Оплата картами МИР и СБП</div>
             </div>
-            <div class="bg-white p-4 rounded-[20px] flex flex-col gap-10 max-w-[220px]">
-              <img alt="Lamp Icon" loading="lazy" width="36" height="36" decoding="async" src="/svg/lamp.svg"/>
-              <div class="text-sm">Быстрое <br> бронирование на сайте</div>
+            <div class="bg-white p-2 md:p-4 rounded-[20px] flex flex-col gap-4 md:gap-10 max-w-[160px] md:max-w-[220px]">
+              <img alt="Lamp Icon" loading="lazy" width="36" height="36" decoding="async" src="/svg/lamp.svg" />
+              <div class="text-xs md:text-sm">Быстрое <br> бронирование на сайте</div>
             </div>
           </div>
         </div>
