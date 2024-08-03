@@ -23,6 +23,11 @@ body {
   font-family: 'Geologica', sans-serif;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1320px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 </style>
