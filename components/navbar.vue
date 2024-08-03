@@ -53,6 +53,10 @@ html {
   scroll-behavior: smooth;
 }
 
+NuxtImg {
+  height: 46px;
+}
+
 .wrapper {
   margin-left: auto;
   margin-right: auto;

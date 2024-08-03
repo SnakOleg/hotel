@@ -59,6 +59,10 @@ html {
   padding-right: 1rem;
 }
 
+NuxtImg {
+  height: 46px;
+}
+
 .rounded-20 {
   border-radius: 20px;
 }
