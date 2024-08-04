@@ -22,12 +22,12 @@ export default {
     initMap() {
       ymaps.ready(() => {
         const map = new ymaps.Map(this.id, {
-          center: [44.653747, 37.701304],
+          center: [45.329081, 37.323482],
           zoom: 17,
           controls: ['zoomControl', 'geolocationControl', 'fullscreenControl']
         });
 
-        const placemark = new ymaps.Placemark([44.653747, 37.701304], {
+        const placemark = new ymaps.Placemark([45.329081, 37.323482], {
           hintContent: 'Курортная набережная, 9'
         }, {
           iconLayout: 'default#image',
