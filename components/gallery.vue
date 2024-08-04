@@ -1,6 +1,6 @@
 <template>
   <div :id="id" class="gallery">
-    <h2 class="text-3xl">Наши номера</h2>
+    <h2 class="text-3xl md:text-6xl">Наши номера</h2>
     <div class="gallery-grid">
       <div
           v-for="(room, index) in rooms"
