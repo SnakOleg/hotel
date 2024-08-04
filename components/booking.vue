@@ -13,7 +13,7 @@
               oncontextmenu="return false;"
               style="user-select: none;"
           />
-          <h1 class="absolute left-0 bottom-0 block text-5xl md:text-5xl lg:text-7xl">
+          <h1 class="absolute left-0 bottom-0 block text-4xl md:text-5xl lg:text-7xl">
             <span id="network-title" class="relative block">
               <span class="relative z-[1] inline-block">
                 <span id="network-text" style="font-family: 'GeologicaExtra'" class="relative z-[3] inline-block px-2 py-1 md:px-4 md:py-2 text-[#c2a404]">
@@ -31,7 +31,7 @@
               </span>
             </span>
 
-            <span id="petersburg-title" class="relative block text-[55px] md:text-5xl lg:text-7xl">
+            <span id="petersburg-title" class="relative block text-[42px] md:text-5xl lg:text-7xl">
               <span class="relative z-[1] inline-block">
                 <span id="petersburg-text" style="font-family: 'GeologicaExtra'" class="relative z-[3] inline-block px-2 py-1 md:px-4 md:py-2 text-[#c2a404]">
                   Азовское море

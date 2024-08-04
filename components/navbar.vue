@@ -61,7 +61,5 @@ img {
   margin-left: auto;
   margin-right: auto;
   max-width: 1320px;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 </style>
