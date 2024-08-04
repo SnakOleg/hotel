@@ -3,11 +3,11 @@
     <div class="md:pt-20 pt-5 pb-5">
       <div class="wrapper">
         <div class="bg-white p-4 rounded-20 mb-11">
-          <div class="flex lg:flex-row flex-row md:gap-16 gap-6">
+          <div class="flex lg:flex-row flex-col flex-row place-items-center md:gap-16 gap-6">
             <a class="hover:opacity-60 an" href="/">
               <NuxtImg src="image/logo.png" height="100"/>
             </a>
-            <div class="flex flex-row gap-4 mt-8">
+            <div class="flex lg:flex-row flex-col gap-4 mt-8">
               <a class="tbase hover:opacity-60" href="#booking-form">Главная</a>
               <a class="tbase hover:opacity-60" href="#gallery">Номера</a>
               <a class="tbase hover:opacity-60" href="#map">Как доехать</a>
