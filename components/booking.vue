@@ -13,7 +13,7 @@
               oncontextmenu="return false;"
               style="user-select: none;"
           />
-          <h1 class="absolute left-0 bottom-0 block text-3xl md:text-5xl lg:text-7xl">
+          <h1 class="absolute left-0 bottom-0 block text-5xl md:text-5xl lg:text-7xl">
             <span id="network-title" class="relative block">
               <span class="relative z-[1] inline-block">
                 <span id="network-text" style="font-family: 'GeologicaExtra'" class="relative z-[3] inline-block px-2 py-1 md:px-4 md:py-2 text-[#c2a404]">
@@ -31,7 +31,7 @@
               </span>
             </span>
 
-            <span id="petersburg-title" class="relative block text-3xl md:text-5xl lg:text-7xl">
+            <span id="petersburg-title" class="relative block text-[55px] md:text-5xl lg:text-7xl">
               <span class="relative z-[1] inline-block">
                 <span id="petersburg-text" style="font-family: 'GeologicaExtra'" class="relative z-[3] inline-block px-2 py-1 md:px-4 md:py-2 text-[#c2a404]">
                   Азовское море
@@ -48,7 +48,7 @@
               </span>
             </span>
           </h1>
-          <div id="card-container" class="absolute right-2 md:right-6 bottom-6 gap-2 md:gap-4 flex flex-col card-item invisible opacity-0">
+          <div id="card-container" class="absolute gap-2 md:gap-4 flex flex-col card-item invisible opacity-0 left-2 md:left-auto md:right-6 bottom-[150px] md:bottom-6">
             <div class="bg-white p-2 md:p-4 rounded-[20px] flex flex-col gap-4 md:gap-10 max-w-[160px] md:max-w-[220px]">
               <img alt="Card Icon" loading="lazy" width="36" height="36" decoding="async" src="/svg/card.svg" />
               <div class="text-xs md:text-sm">Оплата картами МИР и СБП</div>
@@ -58,6 +58,7 @@
               <div class="text-xs md:text-sm">Быстрое <br> бронирование на сайте</div>
             </div>
           </div>
+
         </div>
       </div>
       <div class="container-reservation mt-8">

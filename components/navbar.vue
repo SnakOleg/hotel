@@ -12,7 +12,7 @@
             <a class="tbase hover:opacity-60" href="#map">Мы тут</a>
             <a class="tbase hover:opacity-60" href="#contacts">Контакты</a>
           </div>
-          <button class="md:hidden flex items-center" @click="toggleMenu">
+          <button class="md:hidden flex items-center absolute right-10" @click="toggleMenu">
             <svg class="w-6 h-6 text-[#7E7E8E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>

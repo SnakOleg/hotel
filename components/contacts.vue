@@ -1,9 +1,9 @@
 <template>
-  <div :id="id" class="contacts wrapper md:pt-20 pt-5 pb-5">
-    <footer class="md:pt-20 pt-5 pb-5">
+  <footer :id="id">
+    <div class="md:pt-20 pt-5 pb-5">
       <div class="wrapper">
-        <div class="bg-white md:p-8 p-6 rounded-20 mb-50 shadow-lg">
-          <div class="flex lg:flex-row flex-col gap-6 lg:gap-16">
+        <div class="bg-white md:p-8 p-4 rounded-20 mb-11">
+          <div class="flex lg:flex-row flex-col md:gap-16 gap-6">
             <a class="hover:opacity-60 an" href="/">
               <NuxtImg src="image/logo.png" height="80"/>
             </a>
@@ -20,17 +20,15 @@
             <p>Адрес: Курортная набережная, 9, Россия</p>
           </div>
         </div>
-      </div>
-      <div class="footer-bottom flex justify-between items-center">
-        <div class="footer-text" style="font-family: 'Geologica', sans-serif">
-          © 2024 Азовское море
-        </div>
-        <div class="tsm-ex text-black/80">
-          <a href="https://github.com/SnakOleg" class="hover:opacity-80">Разработал Snak</a>
+        <div class="flex gap-5 md:flex-wrap justify-between">
+          <div class="tsm-ex">© <!-- -->2024<!-- --> Азовское море</div>
+          <a href="https://github.com/SnakOleg/" class="flex gap-2" rel="noreferrer">
+            <div class="tsm-ex">Разработал сайт Snak</div>
+          </a>
         </div>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -67,19 +65,11 @@ img {
   border-radius: 20px;
 }
 
-.bg-white {
-  background-color: #ffffff;
-}
-
-.shadow-lg {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.footer-link {
-  display: block;
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s ease, opacity 0.3s ease;
+.tsm-ex {
+  font-family: Geologica, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 200;
 }
 
 .footer-text {
