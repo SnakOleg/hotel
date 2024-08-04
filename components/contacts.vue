@@ -2,22 +2,22 @@
   <footer :id="id">
     <div class="md:pt-20 pt-5 pb-5">
       <div class="wrapper">
-        <div class="bg-white md:p-8 p-4 rounded-20 mb-11">
-          <div class="flex lg:flex-row flex-col md:gap-16 gap-6">
+        <div class="bg-white p-4 rounded-20 mb-11">
+          <div class="flex lg:flex-row flex-row md:gap-16 gap-6">
             <a class="hover:opacity-60 an" href="/">
-              <NuxtImg src="image/logo.png" height="80"/>
+              <NuxtImg src="image/logo.png" height="100"/>
             </a>
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-row gap-4 mt-8">
               <a class="tbase hover:opacity-60" href="#booking-form">Главная</a>
               <a class="tbase hover:opacity-60" href="#gallery">Номера</a>
               <a class="tbase hover:opacity-60" href="#map">Как доехать</a>
               <a class="tbase hover:opacity-60" href="#contacts">Контакты</a>
             </div>
             <div class="flex-grow"></div>
-          </div>
-          <div class="footer-text text-right mt-6">
-            <p>Телефон: +7 (123) 456-78-90</p>
-            <p>Адрес: Курортная набережная, 9, Россия</p>
+            <div class="footer-text text-right mt-6">
+              <p>Телефон: +7 (123) 456-78-90</p>
+              <p>Адрес: Курортная набережная, 9, Россия</p>
+            </div>
           </div>
         </div>
         <div class="flex gap-5 md:flex-wrap justify-between">
@@ -56,7 +56,7 @@ html {
 }
 
 img {
-  height: 46px;
+  height: 80px;
 }
 
 .rounded-20 {
