@@ -21,7 +21,7 @@
           </div>
         </div>
         <div class="flex gap-5 md:flex-wrap justify-between">
-          <div class="tsm-ex">© <!-- -->2024<!-- --> Азовское море</div>
+          <div class="tsm-ex">© <!-- -->2024<!-- --> Берег Моря</div>
           <a href="https://github.com/SnakOleg/" class="flex gap-2" rel="noreferrer">
             <div class="tsm-ex">Разработал сайт Snak</div>
           </a>
