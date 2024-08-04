@@ -28,7 +28,7 @@ export default {
         });
 
         const placemark = new ymaps.Placemark([45.329081, 37.323482], {
-          hintContent: 'Курортная набережная, 9'
+          hintContent: 'Станица Голубицкая, Курортная улица 145'
         }, {
           iconLayout: 'default#image',
           iconImageSize: [30, 42],
