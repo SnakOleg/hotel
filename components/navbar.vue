@@ -7,9 +7,9 @@
             <NuxtImg src="image/logo.png" height="46"/>
           </a>
           <div class="md:flex hidden gap-8 items-center">
-            <a class="tbase hover:opacity-60" href="#booking-form">Отели</a>
-            <a class="tbase hover:opacity-60" href="#gallery">Апартаменты</a>
-            <a class="tbase hover:opacity-60" href="#map">Мы тут</a>
+            <a class="tbase hover:opacity-60" href="#booking-form">Главная</a>
+            <a class="tbase hover:opacity-60" href="#gallery">Номера</a>
+            <a class="tbase hover:opacity-60" href="#map">Как доехать</a>
             <a class="tbase hover:opacity-60" href="#contacts">Контакты</a>
           </div>
           <button class="md:hidden flex items-center absolute right-10" @click="toggleMenu">

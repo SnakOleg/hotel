@@ -1,6 +1,6 @@
 <template>
   <div :id="id" class="gallery">
-    <h2 class="text-6xl">Наши номера</h2>
+    <h2 class="text-3xl">Наши номера</h2>
     <div class="gallery-grid">
       <div
           v-for="(room, index) in rooms"
@@ -14,7 +14,7 @@
           :key="index"
           :class="['gallery-description', `div${index + 1}-text`, { visible: visibleIndexes.includes(index) }]"
       >
-        <h3 class="text-5xl p-4">{{ room.name }}</h3>
+        <h3 class="text-4xl p-4">{{ room.name }}</h3>
         <p>{{ room.description }}</p>
       </div>
     </div>

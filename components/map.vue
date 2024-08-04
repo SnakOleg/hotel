@@ -1,5 +1,5 @@
 <template>
-  <h2 class="text-6xl">Мы находимся тут</h2>
+  <h2 class="text-4xl">Мы находимся тут</h2>
   <div :id="id" class="map" style="width: 100%; height: 400px;"></div>
 </template>
 

@@ -8,9 +8,9 @@
               <NuxtImg src="image/logo.png" height="80"/>
             </a>
             <div class="flex flex-col gap-4">
-              <a class="tbase hover:opacity-60" href="#booking-form">Отели</a>
-              <a class="tbase hover:opacity-60" href="#gallery">Апартаменты</a>
-              <a class="tbase hover:opacity-60" href="#map">Мы тут</a>
+              <a class="tbase hover:opacity-60" href="#booking-form">Главная</a>
+              <a class="tbase hover:opacity-60" href="#gallery">Номера</a>
+              <a class="tbase hover:opacity-60" href="#map">Как доехать</a>
               <a class="tbase hover:opacity-60" href="#contacts">Контакты</a>
             </div>
             <div class="flex-grow"></div>
@@ -53,8 +53,6 @@ html {
   margin-left: auto;
   margin-right: auto;
   max-width: 1320px;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 img {
