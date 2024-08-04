@@ -5,13 +5,14 @@
         <div class="bg-white p-4 rounded-20 mb-11">
           <div class="flex lg:flex-row flex-col flex-row md:gap-16 gap-6">
             <a class="flex justify-center xl:justify-start xl:py-5 mx-auto lg:mx-0" href="/">
-              <NuxtImg src="image/logo.png" height="100"/>
+              <NuxtImg src="image/logo.svg" height="100"/>
             </a>
             <div class="flex lg:flex-row flex-col place-items-center gap-4">
               <a class="tbase hover:opacity-60" href="#booking-form">Главная</a>
               <a class="tbase hover:opacity-60" href="#gallery">Номера</a>
               <a class="tbase hover:opacity-60" href="#map">Как доехать</a>
               <a class="tbase hover:opacity-60" href="#contacts">Контакты</a>
+              <a class="tbase hover:opacity-60" href="#about">О нас</a>
             </div>
             <div class="flex-grow"></div>
             <div class="footer-text text-right flex-col md:mt-20">

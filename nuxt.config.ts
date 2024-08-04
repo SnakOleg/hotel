@@ -5,10 +5,10 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
       title: 'Hotel',
       meta: [
-        { property: 'og:image', content: '/image/logo.png' }
+        { property: 'og:image', content: '/image/favicon.svg' }
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/image/logo.png' }
+        { rel: 'icon', type: 'image/png', href: '/image/logo.svg' }
       ],
     },
   },

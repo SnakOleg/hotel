@@ -1,16 +1,12 @@
 <template>
   <div :id="id" class="apartments py-8">
     <div class="container mx-auto px-4">
-      <!-- Заголовок секции -->
       <div class="text-center mb-12">
         <h2 class="text-4xl font-bold mb-4">Номера</h2>
       </div>
 
-      <!-- Апартаменты блоки -->
       <div class="space-y-12">
-        <!-- Блоки для каждого номера -->
         <div v-for="(room, index) in rooms" :key="index" class="relative flex flex-col lg:flex-row items-center lg:items-start lg:space-x-8">
-          <!-- Картинки и карусель -->
           <div class="lg:w-1/2">
             <div class="carousel">
               <div class="carousel-inner" :style="{ transform: `translateX(-${currentSlides[index] * 100}%)` }">
@@ -23,8 +19,7 @@
             </div>
           </div>
 
-          <!-- Текст и кнопка -->
-          <div class="lg:w-1/2 text-lg relative">
+          <div class="lg:w-1/2 text-lg relative mt-5">
             <div class="bg-[#ffffff] p-6 rounded-lg shadow-lg transform -rotate-2 -translate-x-4">
               <h3 class="text-2xl font-semibold mb-4">{{ room.title }}</h3>
               <p class="mb-4">{{ room.description }}</p>
@@ -47,7 +42,7 @@ export default {
   },
   data() {
     return {
-      currentSlides: [0, 0, 0], // Начальное положение слайдов для каждого блока
+      currentSlides: [0, 0, 0],
       rooms: [
         {
           title: "Апартаменты",

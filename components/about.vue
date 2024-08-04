@@ -1,7 +1,7 @@
 <template>
-  <div :id="id" class="gallery">
-    <h2 class="text-3xl md:text-6xl">О нас</h2>
-    <div class="gallery-grid">
+  <div :id="id" class="about">
+    <h2 class="text-3xl md:text-6xl text-center mx-auto">Кратко об базе отдыха</h2>
+    <div class="gallery-grid ">
       <div
           v-for="(room, index) in rooms"
           :key="index"
@@ -14,7 +14,6 @@
 </template>
 
 <script>
-//grid-template-rows: repeat(3, 1fr);
 export default {
   props: {
     id: {
@@ -26,7 +25,6 @@ export default {
     return {
       rooms: [
         {
-          name: 'Кратко об базе отдыха:',
           description: ' Это идеальное место для тех, кто ценит высочайший уровень сервиса и приватности.',
         },
       ],

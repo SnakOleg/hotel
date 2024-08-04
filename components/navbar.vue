@@ -4,13 +4,14 @@
       <div class="bg-white items-center rounded-2xl py-3 md:px-6 px-4 pr-2 flex md:gap-3 gap-6 md:justify-between">
         <div class="flex gap-8 items-center">
           <a class="text-[#7E7E8E] hover:opacity-60 an" href="/">
-            <NuxtImg src="image/logo.png" height="46"/>
+            <NuxtImg src="image/logo.svg" height="46"/>
           </a>
           <div class="md:flex hidden gap-8 items-center font-light">
             <a class="tbase hover:opacity-60" href="#booking-form">Главная</a>
             <a class="tbase hover:opacity-60" href="#gallery">Номера</a>
             <a class="tbase hover:opacity-60" href="#map">Как доехать</a>
             <a class="tbase hover:opacity-60" href="#contacts">Контакты</a>
+            <a class="tbase hover:opacity-60" href="#about">О нас</a>
           </div>
           <button class="md:hidden flex items-center absolute right-10" @click="toggleMenu">
             <svg class="w-8 h-8 text-[#7E7E8E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +55,7 @@ html {
 }
 
 img {
-  height: 46px;
+  height: 42px;
 }
 
 .wrapper {
