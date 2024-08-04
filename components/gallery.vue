@@ -149,6 +149,11 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .gallery-item,
+  .gallery-description,
+  h3{
+    font-size: 0px;
+  }
   .gallery-grid {
     display: block;
   }

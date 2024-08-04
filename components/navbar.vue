@@ -6,15 +6,15 @@
           <a class="text-[#7E7E8E] hover:opacity-60 an" href="/">
             <NuxtImg src="image/logo.png" height="46"/>
           </a>
-          <div class="md:flex hidden gap-8 items-center">
+          <div class="md:flex hidden gap-8 items-center font-light">
             <a class="tbase hover:opacity-60" href="#booking-form">Главная</a>
             <a class="tbase hover:opacity-60" href="#gallery">Номера</a>
             <a class="tbase hover:opacity-60" href="#map">Как доехать</a>
             <a class="tbase hover:opacity-60" href="#contacts">Контакты</a>
           </div>
           <button class="md:hidden flex items-center absolute right-10" @click="toggleMenu">
-            <svg class="w-6 h-6 text-[#7E7E8E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            <svg class="w-8 h-8 text-[#7E7E8E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
           </button>
         </div>
