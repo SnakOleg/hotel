@@ -20,7 +20,7 @@
           </div>
 
           <div class="lg:w-1/2 text-lg relative mt-5">
-            <div class="bg-[#ffffff] p-6 rounded-lg shadow-lg transform -rotate-2 -translate-x-4">
+            <div class="bg-[#ffffff] p-6 rounded-lg shadow-lg transform lg:-rotate-2 lg:-translate-x-4">
               <h3 class="text-2xl font-semibold mb-4">{{ room.title }}</h3>
               <p class="mb-4">{{ room.description }}</p>
               <button class="bg-[#c2a404] text-white px-6 py-2 rounded-md mt-4">Забронировать</button>
@@ -53,11 +53,6 @@ export default {
           title: "Студия",
           description: "Просторная и светлая студия с видом на город. Площадь номера — 30 м². Двуспальная кровать, полностью оборудованная кухня с обеденным столом, ванная комната с душевой, кабельное ТВ — в номере есть всё необходимое для вашего идеального отдыха.",
           images: ["/image/gallery/standard.jpg", "/image/gallery/penthouse.jpg"],
-        },
-        {
-          title: "Студия с балконом",
-          description: "Студия с балконом и видом на оживлённую улицу Широкой Балки. Площадь номера — 32 м². Полностью оборудованная кухня с обеденным столом и стульями, ванная с душевой, двуспальная кровать, раскладной диван. В номере есть балкон, а что может быть лучше, чем устроиться на уютном балконе с хорошей книгой и чашкой кофе рано утром или прохладным шампанским на закате.",
-          images: ["/image/gallery/lux.png", "/image/gallery/standard.jpg"],
         },
       ],
     };
@@ -115,33 +110,4 @@ button {
   cursor: pointer;
 }
 
-.bg-[#ffffff] {
-  background-color: #ffffff;
-  position: relative;
-  overflow: hidden;
-}
-
-.bg-[#ffffff]::before {
-               content: '';
-               position: absolute;
-               top: 0;
-               right: 0;
-               width: 50%;
-               height: 100%;
-               background-color: #f5f5f5;
-               transform: skewX(-10deg);
-               transform-origin: top right;
-             }
-
-.bg-[#ffffff]::after {
-               content: '';
-               position: absolute;
-               bottom: 0;
-               left: 0;
-               width: 50%;
-               height: 100%;
-               background-color: #f5f5f5;
-               transform: skewX(10deg);
-               transform-origin: bottom left;
-             }
 </style>
