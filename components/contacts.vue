@@ -9,7 +9,7 @@
             </a>
             <div class="flex lg:flex-row flex-col place-items-center gap-4">
               <a class="tbase hover:opacity-60" href="#booking-form">Главная</a>
-              <a class="tbase hover:opacity-60" href="#gallery">Номера</a>
+              <a class="tbase hover:opacity-60" href="#apartments">Номера</a>
               <a class="tbase hover:opacity-60" href="#map">Как доехать</a>
               <a class="tbase hover:opacity-60" href="#contacts">Контакты</a>
               <a class="tbase hover:opacity-60" href="#about">О нас</a>

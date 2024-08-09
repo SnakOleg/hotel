@@ -8,7 +8,7 @@
           </a>
           <div class="md:flex hidden gap-8 items-center font-light">
             <a class="tbase hover:opacity-60" href="#booking-form">Главная</a>
-            <a class="tbase hover:opacity-60" href="#gallery">Номера</a>
+            <a class="tbase hover:opacity-60" href="#apartments">Номера</a>
             <a class="tbase hover:opacity-60" href="#map">Как доехать</a>
             <a class="tbase hover:opacity-60" href="#contacts">Контакты</a>
             <a class="tbase hover:opacity-60" href="#about">О нас</a>
@@ -21,7 +21,7 @@
         </div>
         <div :class="{'block': isMenuOpen, 'hidden': !isMenuOpen}" class="md:hidden absolute left-0 w-full bg-white rounded-lg shadow-lg mt-2 py-3 px-2 mt-64 md:rounded-tr-2xl">
           <a class="block py-2 px-4 text-[#7E7E8E] hover:bg-gray-200" href="#booking-form" @click="closeMenu">Отели</a>
-          <a class="block py-2 px-4 text-[#7E7E8E] hover:bg-gray-200" href="#gallery" @click="closeMenu">Апартаменты</a>
+          <a class="block py-2 px-4 text-[#7E7E8E] hover:bg-gray-200" href="#apartments" @click="closeMenu">Апартаменты</a>
           <a class="block py-2 px-4 text-[#7E7E8E] hover:bg-gray-200" href="#map" @click="closeMenu">Мы тут</a>
           <a class="block py-2 px-4 text-[#7E7E8E] hover:bg-gray-200" href="#contacts" @click="closeMenu">Контакты</a>
         </div>
